@@ -1,0 +1,18 @@
+<li class="list-group-item-danger" *ngIf="Post.LoveIts<0">
+    <div><span class="title">{{Post.Title}}</span>
+    <span class="createdad">{{Post.CreatedAt | date:'short'}}</span>
+    </div> <p>{{Post.Content}}</p>
+    <button class="btn btn-success"  (click)="OnLike()">Love It!</button><button class="btn btn-danger" (click)="OnDislike()">Don't love It!</button> {{Post.LoveIts}} likes
+  </li>
+ <li class="list-group-item" *ngIf="Post.LoveIts==0">
+  <div><span class="title">{{Post.Title}}</span>
+  <span class="createdad">{{Post.CreatedAt | date:'short'}}</span>
+  </div> <p>{{Post.Content}}</p>
+  <button class="btn btn-success"  (click)="OnLike()">Love It!</button><button class="btn btn-danger" (click)="OnDislike()">Don't love It!</button>{{Post.LoveIts}} likes
+</li>
+<li class="list-group-item-success" *ngIf="Post.LoveIts>0">
+  <div><span class="title">{{Post.Title}}</span>
+  <span class="createdad">{{Post.CreatedAt | date:'short'}}</span>
+  </div> <p>{{Post.Content}}</p>
+  <button class="btn btn-success"  (click)="OnLike()">Love It!</button><button class="btn btn-danger" (click)="OnDislike()">Don't love It!</button>{{Post.LoveIts}} likes
+</li>
